@@ -1,0 +1,191 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<link href="js/slimscroll/libs/prettify/prettify.css" type="text/css" rel="stylesheet" />
+<link href="css/mystyles.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/slimscroll/libs/prettify/prettify.js"></script>
+<script type="text/javascript" src="js/slimscroll/jquery.slimscroll.min.js"></script>
+<script>
+        !window.jQuery && document.write('<script src="jquery-1.10.1.min.js"><\/script>');
+    </script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="js/fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="js/fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="js/fancyBoxsource/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+    <script type="text/javascript" src="js/fancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('#scrollingContent').slimscroll({
+    size: '7px',
+      height: '600px',
+  width: '99%'
+  });
+
+ /* 
+  $('#webSamples').slimscroll({
+    size: '7px',
+      height: '580px',
+  width: '60%'
+  });
+       */ /*
+             *  Button helper. Disable animations, hide close button, change title type and content
+             */
+
+            $('.imageanchors').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+
+                prevEffect : 'none',
+                nextEffect : 'none',
+
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    }
+                },
+
+                afterLoad : function() {
+                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
+/*$( "#homeCont" ).one('mouseover',function() {
+$(this).fadeTo( "slow" , 1, function() {
+// Animation complete.
+});
+$(".contentDivInner").fadeTo( 5000 , 1, function() {
+});
+});
+$("body").one('mouseover',function(){
+$(".contentDivInner").fadeTo( 5000 , 1, function() {
+});*/
+
+})
+
+$(".otherFont").click(function(){
+$(".contentDiv").addClass("sanFont")
+$("#AboutMeDiv").find(".hometext").removeClass("hometext");
+})
+    });
+</script>
+</head>
+<body>
+
+  <!---->
+  <ul id="topNav" class="topNav" style="">
+    <li style="" id="homelnk" class="homelnk"> Home </li>
+    <li style="" id="samplelnk" class="samplelnk"> Samples </li>
+    <li style="" id="contactlnk" class="contactlnk "> Contact </li>
+    <li style="" id="contactlnk" class="contactlnk "> Photo Galary</li>
+    <li style="" id="contactlnk" class="contactlnk "> Tutorials</li>
+  </ul>
+  <div id="slider" style=" ">&nbsp;</div>
+  <br />
+  <br />
+    <h2>Change Theme</h2>
+  <div id="theams" >
+
+  <ul>
+  
+  	<li>  Desi Theam    </li>
+    <li>Dreamy Lemon     </li>
+    <li> Pinky's Passion </li>
+  </ul>
+  </div>
+<div class="contentDiv">
+
+  <div id="homeCont" style="">
+    <div id="scrollingContent">
+    <!-- About Me Div-->
+      <div id="AboutMeDiv" style="float:left; width:90%; padding-left:5%;clear:both;">
+        <h1>About me </h1>
+            <a href="javascript:void(0);" class="otherFont floatRight" style="height:5px;">Change Font. </a>
+        <p class="hometext"> Welcome to my website!!! Thanks for stopping by,  I am a web designer, based in Bangalore, My hobbies are reading books, spending time with my family, music etc.
+          developer who has been in this field for over eight years.I love to do creative design.. 
+          
+          Please note I am NOT SUPPORTING INTERNET EXPLORER, the site works fine in IE. </p>
+        <h5>Things I Do</h5>
+        <blockquote>
+          <ul class="hometext">
+            <li>Web site designing and development</li>
+            <li>Icon Designing</li>
+            <li>Logo designing</li>
+            <li>e-greetings</li>
+          </ul>
+        </blockquote>
+        <p class="hometext">I love to do creative work, so if u want to get your e card, wedding invitaion, wesite designed, please contact me. If you want to get your site done, please contact me at rnijampure@gmail.com/ ng_rohini@yahoo.co.in</p>
+    
+      </div>
+          <!-- About Me Div End-->
+		   <!--Web designs finish -->
+		  <div id="websiteDesignSamples" style="float:left; clear:both; display:none;">
+        <h1>Some web designs done by me</h1>  
+          
+      <div style="" id='webSamples'>
+        <ul style="width:100%; margin:0px;padding:0;" class="slideshowSpecial">
+          <li style="width:100%;">
+				<a href="images/index.jpg" class="imageanchors" rel="example_group" id="example1"><img src="images/rishi_thumb.jpg" alt="Gauri-baby model"></a>
+						<a href="images/innerpage1.jpg" class="imageanchors" rel="example_group" id="example1"><img src="images/rishi2_thumb.jpg" alt="Gauri-baby model"></a>
+				<a href="images/pract.jpg" class="imageanchors" rel="example_group" id="example4"><img src="images/pract_thumb.jpg" title="Gauri-in playfull mood" alt="Gauri-baby model"></a>
+				<a href="images/mobile.gif" class="imageanchors" rel="example_group" id="example1"><img src="images/sony_thumb.jpg" title="Hello baby, How do you do?" alt="Gauri-baby model"></a>
+				<a href="images/inner_Page.jpg" class="imageanchors" rel="example_group" id="example2"><img src="images/adlabs3_thumb.jpg" alt="Gauri-baby model"></a>
+				<a href="images/index_layout2.jpg" class="imageanchors" rel="example_group" id="example2"><img src=" images/adlabs2_thumb.jpg" alt="Gauri-baby model"></a>
+				<a href="images/indexpage_2.jpg" class="imageanchors" rel="example_group" id="example1"><img src="images/adlabs1_thumb.jpg" alt="Gauri-baby model"></a>
+				<a href="images/index1.jpg" class="imageanchors" rel="example_group" id="example4"><img src="images/Pres_thumb.jpg" alt="Gauri-baby model"></a>
+				<a href="images/inner1.jpg" class="imageanchors" rel="example_group" id="example4"><img src="images/Pres1_thumb.jpg" alt="Gauri-baby model"></a>
+				<a href="images/indexpage.jpg" class="imageanchors" rel="example_group" id="example1"><img src="images/indexpage_thumb.jpg" alt="Gauri-baby model"></a>
+				<a href="images/laurenSpa.jpg" class="imageanchors" rel="example_group" id="example4"><img src="images/laurenSpa_thumb.jpg" alt="Gauri-baby model"></a>
+				<a href="images/lauren_inner.jpg" class="imageanchors" rel="example_group" id="example4"><img src="images/lauren_inner_inner.jpg" alt="Gauri-baby model"></a>
+           </li>
+        
+        </ul>
+      </div>
+	  </div>
+	  <!--Web designs finish -->
+	    <!--Art work start -->
+		  <div id="artWorkSamples" style="float:left; clear:both; display:none;">
+        <h1>Some Art work done by me</h1>  
+          
+      <div style="" id='webSamples'>
+        <ul style="width:100%; margin:0px;padding:0;" class="slideshowSpecial">
+          <li style="width:100%;">
+		   <a id="example1" rel="example_group"  class="imageanchors"  href="images/big_women.jpg"><img alt="Gauri-baby model" src="images/readiingLady_thumb.jpg" /></a>
+    <a id="example4" rel="example_group"   class="imageanchors"  href="images/coverBoy.jpg"><img src="images/coverBoy_thumb.jpg" /></a>
+    <a id="example1" rel="example_group" class="imageanchors"  href="images/coverGirl.jpg"><img   alt="Gauri-baby model" title="Hello baby, How do you do?" src="images/coverGirl_thumb.jpg" /></a>
+   <a id="example2" rel="example_group" class="imageanchors"  href="images/bindi.jpg"><img  alt="Gauri-baby model"  src="images/eye_thumb.jpg" /></a>
+   <a id="example2" rel="example_group" class="imageanchors"  href="images/big_eng.jpg"><img   alt="Gauri-baby model"  src="images/wedding_thumb.jpg" /></a>
+     <a id="example4" rel="example_group" class="imageanchors"  href="images/big_man_women.jpg"><img   alt="Gauri-baby model"  src="images/raj_thumb.jpg" /></a>
+       <a id="example1" rel="example_group" class="imageanchors"  href="images/fat.jpg"><img   alt="Gauri-baby model"  src="images/mylady_thumb.jpg" /></a>
+               <a id="example1" rel="example_group" class="imageanchors"  href="images/DSC00354.JPg"><img   alt="Gauri-baby model"  src="images/sitting_thumb.jpg" /></a>
+
+<!--
+    <a id="example1" rel="example_group"  class="imageanchors"  href="img/big_women.jpg"><img alt="Gauri-baby model" src="img/readiingLady_thumb.jpg" /></a>
+    <a id="example4" rel="example_group"   class="imageanchors"  href="img/coverBoy.jpg"><img src="img/coverBoy_thumb.jpg" /></a>
+    <a id="example1" rel="example_group" class="imageanchors"  href="img/coverGirl.jpg"><img   alt="Gauri-baby model" title="Hello baby, How do you do?" src="img/coverGirl_thumb.jpg" /></a>
+   <a id="example2" rel="example_group" class="imageanchors"  href="img/bindi.jpg"><img  alt="Gauri-baby model"  src="img/eye_thumb.jpg" /></a>
+   <a id="example2" rel="example_group" class="imageanchors"  href="img/big_eng.jpg"><img   alt="Gauri-baby model"  src="img/wedding_thumb.jpg" /></a>
+     <a id="example4" rel="example_group" class="imageanchors"  href="img/big_man_women.jpg"><img   alt="Gauri-baby model"  src="img/raj_thumb.jpg" /></a>
+       <a id="example1" rel="example_group" class="imageanchors"  href="img/fat.jpg"><img   alt="Gauri-baby model"  src="img/mylady_thumb.jpg" /></a>
+               <a id="example1" rel="example_group" class="imageanchors"  href="img/DSC00354.JPg"><img   alt="Gauri-baby model"  src="img/sitting_thumb.jpg" /></a> 
+
+
+-->
+
+           </li>
+        
+        </ul>
+      </div>
+	  </div>
+	  <!--Web designs finish -->
+    </div>
+  </div>
+</div>
+<div class="contentDivInner"> &nbsp;</div>
+</body>
+</html>

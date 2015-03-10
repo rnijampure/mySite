@@ -1,0 +1,180 @@
+html, body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+body {
+    background: #e7e5d4;
+	  font-family: samarkan;
+	background: #e7e5d4 url(../images/bodyBack.jpg) right top fixed no-repeat;
+		  
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    transition: none;
+    -o-transition: none;
+    -ms-transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+}
+body:hover {
+    background: #e7e5d4;
+	  font-family: samarkan;
+	      background:url(../images/bodyBackRO.jpg) right top fixed no-repeat;
+		  
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	
+    -webkit-transition: background 6s ease-in-out 5s;
+    -moz-transition: background  6s ease-in-out 5s;
+    -ms-transition: background 6s ease-in-out 5s;
+    -o-transition: background  6s ease-in-out 5s;
+    transition: background  6s ease-in-out 5s;
+	
+}
+@font-face {
+    font-family: 'samarkan';
+    src: url('../css/samarkan/SAMARN__.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+.contentDiv {
+ /*   height:100%;
+    width:100%;
+ 
+    background: #e7e5d4 url(../images/very_big_women_bw_2.png) right top fixed no-repeat;*/
+    font-family: samarkan,Georgia, "Times New Roman", Times, serif;
+    font-size:14px;
+    color:#fff;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow:hidden;
+}
+.contentDivInner {
+position:absolute;
+top:0; left:0;
+    height:100%;
+    width:100%;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	opacity:0;
+	display:none;
+}
+h5 {
+    font-size:12px;
+    margin-left:5%;
+}
+h1 {
+   background:url(../images/peacock.png) no-repeat -2px 25px transparent;
+    line-height: 89px;
+    padding-bottom: 29px;
+    padding-left: 59px;
+    line-height: 89px;
+    padding-bottom: 29px;
+    padding-left: 59px;
+    color:#940f0f;
+    font-size:37px;
+    margin-bottom:0;
+	    font-style:italic;
+}
+#topNav {
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+    positon:fixed;
+	 z-index:999999;
+    top:0;
+	position:absolute; color: #241A9C;
+font-weight: bold;
+font-size: 19px;
+}
+#topNav li {
+    display:inline;
+    padding:10px 20px 0px 10px;
+    cursor:hand;
+}
+#slider {
+    border-bottom:2px groove;
+    position:absolute;
+    height:2px;
+    width:70px;
+}
+#homeCont {
+    border:1px solid white;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    max-height:95%;
+    height:85%;
+    overflow: hidden;
+    width:95%;
+    margin-left:2%!important; background:rgba(0, 0, 0, 0.35);
+
+    clear:both;
+	/*opacity:0;*/
+	position: relative; z-index:3;
+}
+.hometext {
+    font-size:20px;
+   
+}
+#sampleImgs img {
+    border:5px groove #ffffff;
+    margin:15px;
+    float:left;
+    padding:1px;
+}
+
+a {
+    outline: none;
+}
+
+a img {
+    border: 1px solid #BBB;
+    padding: 2px;
+    margin: 10px 20px 10px 0;
+    vertical-align: top;
+}
+
+a img.last {
+    margin-right: 0;    
+}
+
+ul {
+    margin-bottom: 24px;
+    padding-left: 30px; list-style-type:none;
+}
+#websiteDesignSamples{padding-left: 59px;}
+#artWorkSamples{padding-left: 59px;}
+#webSamples{float:left; width:100%;overflow-y:hidden; text-align:left;}
+.otherFont{ font-family:Georgia, "Times New Roman", Times, serif; color:#04026A;font-size: 15px;
+    font-style: italic; position:absolute;top:0;bottom:0; right:0; text-decoration:none;}
+.floatRight{ float:right;}
+.sanFont{ font-family:Arial, Helvetica, sans-serif!important; font-size:14px!important;}
+#theams{float:right;    position: absolute;
+    top: 0;
+    z-index: 999999; right:20px; }
+	#theams h2{ margin-top:0;}
+	#theams ul{ display:block;}
+	#theams ul li:hover{margin-top:10px; margin-bottom:10px; margin-left:10px;margin-right:-10px; background-color:#241A9C; color:#ffffff; }	
+	#theams ul li{ padding:5px; background-color:#FFFFFF;margin-left:0px; margin: 10px; 
+	
+/*-webkit-transition: margin-left 0s ease  linear;
+-moz-transition: margin-left 0s ease  linear ;
+-o-transition: margin-left 0s linear;
+-ms-transition: margin-left 0s linear;
+transition: margin-left 1s ease ;*/
+    transition-delay: 1s;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;	
+	}	

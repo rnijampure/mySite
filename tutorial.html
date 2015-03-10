@@ -1,0 +1,588 @@
+    <!DOCTYPE>
+    <html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <style>
+    html, body {
+        height:100%;
+        margin:0;
+        padding:0;
+    }
+    body {
+    }
+    .contentDiv {
+        height:100%;
+        width:100%;
+        /*/flower.gif*/
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size:14px;
+        color:#04026a;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        overflow:auto;
+    }
+
+    h5 {
+        font-size:12px;
+        margin-left:5%;
+    }
+    h1 {
+        line-height: 89px;
+        padding-bottom: 29px;
+        padding-left: 59px;
+        line-height: 30px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        color:#940f0f;
+        font-family:"Monotype Corsiva";
+        font-size:20px;
+        margin-bottom:0;
+    }
+    h2 {
+        line-height: 89px;
+        padding-bottom: 29px;
+        padding-left: 59px;
+        line-height: 30px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        color:#940f0f;
+        font-family:"Monotype Corsiva";
+        font-size:14px;
+        margin-bottom:0;
+    }
+    #topNav {
+        list-style-type: none;
+        margin:0px;
+        padding:0px;
+        positon:fixed;
+        top:0;
+    }
+    #topNav li {
+        display:inline;
+        padding:10px 20px 0px 10px;
+        cursor:hand;
+    }
+    #slider {
+        border-bottom:2px groove;
+        position:absolute;
+        height:2px;
+        width:70px;
+    }
+    #homeCont {
+        border:1px solid white;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+
+        overflow: hidden;
+        width:95%;
+        margin-left:2%!important;
+        background:rgba(255, 255, 255, 0.7);
+        clear:both;
+    }
+    .hometext {
+        font-size:16px;
+        font-weight:700;
+        font-style:italic;
+    }
+    #sampleImgs img {
+        border:5px groove #ffffff;
+        margin:15px;
+        float:left;
+        padding:1px;
+    }
+
+    a.htwonav {
+        outline: none;
+    	text-decoration:none;
+    	 font-family: Georgia, "Times New Roman", Times, serif;
+        font-size:14px;
+        color:#04026a;
+    }
+    a.htwonav:hover {
+        outline: none;
+    	text-decoration:underline;
+    	 font-family: Georgia, "Times New Roman", Times, serif;
+        font-size:14px;
+        color:#04026a;
+    }
+
+    a img {
+        border: 1px solid #BBB;
+        padding: 2px;
+        margin: 10px 20px 10px 0;
+        vertical-align: top;
+    }
+
+    a img.last {
+        margin-right: 0;    
+    }
+
+    ul {
+        margin-bottom: 24px;
+        padding-left: 30px; list-style-type:none;
+    }
+    .italicText{ font-style:italic; font-weight:bolder;}
+    dd{ color:black;}
+    .sampleCode{margin:5px; padding:5px;width:80%; font-style:italic; background:#f3f3f3; border:1px solid #f2f2f2;}
+    </style>
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <link href="js/slimscroll/libs/prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/slimscroll/libs/prettify/prettify.js"></script>
+    <script type="text/javascript" src="js/slimscroll/jquery.slimscroll.min.js"></script>
+    <script>
+            !window.jQuery && document.write('<script src="jquery-1.10.1.min.js"><\/script>');
+        </script>
+        <!-- Add fancyBox main JS and CSS files -->
+        <script type="text/javascript" src="js/fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+        <link rel="stylesheet" type="text/css" href="js/fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+        <!-- Add Button helper (this is optional) -->
+        <link rel="stylesheet" type="text/css" href="js/fancyBoxsource/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+        <script type="text/javascript" src="js/fancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+       /* $('#scrollingContent').slimscroll({
+        size: '7px',
+          height: '600px',
+      width: '99%'
+      });
+
+       $('#webSamples').slimscroll({
+        size: '7px',
+          height: '580px',
+      width: '60%'
+      });
+          
+
+        });
+    </script>
+    </head>
+    <body>
+    <div class="contentDiv">
+      <!---->
+      <ul id="topNav" class="topNav" style="">
+        <li style="" id="homelnk" class="homelnk"> Home </li>
+        <li style="" id="samplelnk" class="samplelnk"> Samples </li>
+        <li style="" id="contactlnk" class="contactlnk "> Contact </li>
+        <li style="" id="contactlnk" class="contactlnk "> Photo Galary</li>
+        <li style="" id="contactlnk" class="contactlnk "> Tutorials</li>
+      </ul>
+      <div id="slider" style=" ">&nbsp;</div>
+      <br />
+      <br />
+      <div id="homeCont" style="">
+        <div id="scrollingContent" style="float:left;width:80%;border:1px solid black;margin-right:2%;">
+    	<h1>Web Developer interview questions</h1>
+
+    	<p>When going for an UI developer/designer interview, these are the general topics you would like to cover, though the actual questions could vary based on the roles and responsibilities
+
+    <h2>	Interview Topics Checklist:</h2>
+    			   <ul>
+                  <li>XHTML:</li>
+                  <li>Javascript: includig ajax and jquery or any other js framework</li>
+                  <li>Css: including Browser Specific Stylesheets,Hacks,Psudoclasses Pseudoelements,Grouping , nesting,box model,at rule,specificity, css sprites, conditional commenting</li>
+                  <li>JSON</li>
+                  <li>SEO:</li>
+                  <li>XML: </li>
+                  <li>Responsive Design: cross device designing techniques</li>
+                </ul>
+    	</p>
+
+    		<h1>General Web developer Interview Questions	</h1>
+
+     <dl style="margin-left:30px">
+              <dt><span class="italicText">Question 1.</span> What is XHTML?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		 XHTML is a family of current and future document types and modules extend HTML 4. XHTML family document types are XML based, and ultimately are designed to work in conjunction with XML-based user agents
+    <p>XHTML is a reformulation of the three HTML 4 document types as applications of XML It is intended to be used as a language for content that is both XML-conforming and, operates in HTML 4 conforming user agents.:</p>
+    <p>XHTML documents are XML conforming. As such, they are readily viewed, edited, and validated with standard XML tools. 
+    XHTML documents can utilize applications (e.g. scripts and applets) that rely upon either the HTML Document Object Model or the XML Document Object Model [DOM]. 
+     </p>
+    	   <ul>
+  			<li>XHTML elements must be properly nested </li>
+              <li>XHTML elements must always be closed </li>
+              <li>XHTML elements must be in lowercase </li>
+              <li>XHTML documents must have one root element </li>
+              <li>Takes care of backword compatibilyty</li>
+          </ul>
+              </dd>
+            </dl>
+
+     <dl style="margin-left:30px">
+              <dt><span class="italicText">Question 2.</span> What is DTD?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>A DTD, or document type definition, is a collection of XML markup declarations that, as a collection, defines the legal structure, elements, and attributes that are available for use in a document that complies to the DTD
+  <p>There are three formal DTDs for XHTML 1.0, corresponding to the three different versions of HTML 4.01:</p>
+  <ul>
+  			<li><strong>XHTML 1.0 Strict</strong> is the XML equivalent to strict HTML 4.01, and includes elements and attributes that have not been marked deprecated in the HTML 4.01 specification. </li>
+              <li><strong>XHTML 1.0 Transitional</strong> is the XML equivalent of HTML 4.01 Transitional, and includes the presentational elements (such as center, font and strike) excluded from the strict version.  </li>
+              <li><strong>XHTML 1.0 Frameset</strong> is the XML equivalent of HTML 4.01 Frameset, and allows for the definition of frameset documents—a common Web feature in the late 1990s. </li>
+          </ul>
+              </dd>
+            </dl>
+  		     <dl style="margin-left:30px">
+              <dt><span class="italicText">Question 3.</span> What are the two methods to send form data/ differences between GET and POST METHOD</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>	Btoh are ways of sending form data to the page specified in the action attribute.</p>
+  <p><strong>Get Method:</strong>The GET method should be used for non-destructive operations  that is, operations where you are only getting data from the server, not changing data on the server. For example, a query to a search service might be a GET request. GET requests may be cached by the browser, which can lead to unpredictable behavior if you are not expecting it. GET requests generally send all of their data in a query string.</p>
+  		<ul>
+    			<li>
+  		This method appends the form-data to the URL in name/value pairs 
+    			</li>
+    			<li>
+  This method is useful for form submissions where a user want to bookmark the result 
+    			</li>
+  			<li>
+  		This method appends the form-data to the URL in name/value pairs 
+    			</li>
+    		</ul>
+
+
+  There is a limit to how much data you can place in a URL (varies between browsers), therefore, you cannot be sure that all of the form-data will be correctly transferred 
+  Never use the "get" method to pass sensitive information! (password or other sensitive information will be visible in the browser's address bar) 
+              <p><strong>Post Method:</strong>The POST method should be used for destructive operations that is, operations where you are changing data on the server. For example, a user saving a blog post should be a POST request. POST requests are generally not cached by the browser; a query string can be part of the URL, but the data tends to be sent separately as post data.</p>
+  		<ul>
+    			<li>
+			  This method sends the form-data as an HTTP post transaction 
+    			</li>
+    			<li>
+				  Form submissions with the "post" method cannot be bookmarked 
+    			</li>
+  			<li>
+			  The "post" method is more robust and secure than "get", and "post" does not have size limitations 
+    			</li>
+    		</ul>
+              </dd>
+            </dl>
+
+     <dl style="margin-left:30px">
+              <dt><span class="italicText">Question 2.</span> What is the difference between progressive enhancement and graceful degradation?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>Both are important user experience strategies in web development. The older one, graceful degradation, aims to provide an alternative version of your functionality to users with older browsers. Users on IE6, for example, can still use the website but with more basic functionality. The newer one, progressive enhancement, starts with a baseline of usable functionality available for all browsers and increases the richness of the user experience in more modern browsers.</p>
+              </dd>
+            </dl>
+			     <dl style="margin-left:30px">
+              <dt><span class="italicText">Question 2.</span> What is the Semantic Web?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>The Semantic Web describes the relationships between things (like A is a part of B and Y is a member of  Z) and the properties of things (like size, weight, age, and pric</p>
+<p>Semantics simply means trying to make sure your documents mean something, even if CSS is not available, even if your document is being displayed on a device that does not use the same default styles as you expected, or if it is being interpretted through a non-visual medium, such as braille or speech.
+ </p>
+              </dd>
+            </dl>
+		<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 3.</span> What are the various browser compatibility issues you have come accross in your project? how did u tackel them</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+    		 <div class="sampleCode">
+    			parseInt("dear", 25)<br>
+    			Output:NaN
+    		 </div>
+              </dd>
+            </dl>
+			<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 3.</span>diff b/w visibility:none and display:none</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+    		
+              </dd>
+            </dl>
+				<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 3.</span>what is z-index?
+- z-index cannot be used alone. what is the other property that has to be used to make z-index work?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+    		
+              </dd>
+            </dl>
+					<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 3.</span>Difference between name and Id	</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		The only reason to give any element an id is if you intend to reference
+if in some way, otherwise it is unnecessary. The name of form elements
+is included in the data sent when the form is submitted, the id isn't.
+
+id is used as client side and name is used in server side
+Names are mostly used for server-side processing of form data and to group radio buttons etc. Names do not have to be globally unique.
+
+IDs must be unique so are used for accesskeys and best used for anchors. I've always considered the name attribute on anchors and links to be outdated, though I'm not sure if it's been officially deprecated
+    	
+              </dd>
+            </dl>
+			<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 3.</span> how do you defect a browser?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+    		 <div class="sampleCode">
+    			parseInt("dear", 25)<br>
+    			Output:NaN
+    		 </div>
+              </dd>
+            </dl>
+		<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 3.</span> How will you center align a div?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+    		 <div class="sampleCode">
+    			parseInt("dear", 25)<br>
+    			Output:NaN
+    		 </div>
+              </dd>
+            </dl>
+				<dl style="margin-left:30px">
+		  <dt><span class="italicText">Question 3.</span> What are the various ways in which you can add styles to your page/ tags	</dt>
+		  <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+		 <div class="sampleCode">
+			parseInt("dear", 25)<br>
+			Output:NaN
+		 </div>
+		  </dd>
+		</dl>
+		<dl style="margin-left:30px">
+		  <dt><span class="italicText">Question 3.</span> Name some of the new HTML 5/ css3 features you have used	</dt>
+		  <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+		 <div class="sampleCode">
+			parseInt("dear", 25)<br>
+			Output:NaN
+		 </div>
+		  </dd>
+		</dl>
+			<dl style="margin-left:30px">
+		  <dt><span class="italicText">Question 3.</span>What web sites and blogs do you read regularly for update?</dt>
+		  <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+		 <div class="sampleCode">
+			parseInt("dear", 25)<br>
+			Output:NaN
+		 </div>
+		  </dd>
+		</dl>
+			<dl style="margin-left:30px">
+		  <dt><span class="italicText">Question 3.</span>What is the w3c ?</dt>
+		  <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+		 <div class="sampleCode">
+			parseInt("dear", 25)<br>
+			Output:NaN
+		 </div>
+		  </dd>
+		</dl>
+				<dl style="margin-left:30px">
+		  <dt><span class="italicText">Question 3.</span>What’s the difference between standards mode and quirks mode? ?</dt>
+		  <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+	Quirks Mode is a default compatibility mode and may be different from browser to browser, which may result to a lack of consistency in appearance from browser to browser.
+What are the limitations when serv
+		 <div class="sampleCode">
+			parseInt("dear", 25)<br>
+			Output:NaN
+		 </div>
+		  </dd>
+		</dl>
+			<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 7.</span>What can you do to improve page performance?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		In a nutshell page performance is widely understood as the page load time from the users’ perspective, so below are some steps that might improve a page’s performance.
+
+Use sprite images whenever possible, try to group small images commonly used in a single file to be requested just once. See how Google uses sprites in Google Maps to make one request instead of one for each small image.    See a sprite from Google Maps
+Javascripts should be at the bottom of the page, instead of in the head as we use to see out there;
+Ensure parallel requests of your JS and CSS files. In order to force the browser to do that, you can optimize the order you include resources in your page.
+This item can generate its own blog post or even a book so I prefer to suggest you a really good reading about it. Check this out, it’s the google’s best practices on page speed load.
+Compress images whenever possible, it makes a difference;
+Browser Caching is also very import to be set for static resources like JS and CSS files, images, PDFs and HTML. Caching is set in the HTTP header by informing browsers the expiry date or maximum age. Then browsers can load the last downloaded resource from the cache instead of request it again
+              </dd>
+            </dl>
+
+	<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 7.</span>When would you use CSS clear?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		When you want an element on the left or right of the floating element not to wrap around it, you can use clear.
+              </dd>
+            </dl>
+			<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 7.</span>When would you use CSS float?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		Float is used when you want to make an element of your page (usually an image) be pushed to the right or left and make other elements wrap around it.
+              </dd>
+            </dl>
+			<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 7.</span>What do you understand by DOM?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		Float is used when you want to make an element of your page (usually an image) be pushed to the right or left and make other elements wrap around it.
+              </dd>
+            </dl>
+
+    		<h1>  Javascript Interview Questions</h1>
+    		<ul>
+    			<li>
+    				<a class="htwonav" href="javascript:void(0);">Basic Level Questions</a>
+    			</li>
+    			<li>
+    				<a class="htwonav" href="javascript:void(0);">Intermediate/advanced Level Questions</a>
+    			</li>
+    		</ul>
+
+
+    	<div>
+    	<h2>Basic Javascript Interview questions</h2>
+    		<div>
+    		   <ul>
+                  <li>1) What are the different JavaScript types?</li>
+                  <li>2)What does isNaN function do?/ how will you check if a value is numeric or not?</li>
+                  <li>3)What is eval, Why would you use it or avoid it? </li>
+                  <li>4) Name some string methods, what does each of below do?</li>
+                  <li>5) What is the difference between a == and ===?</li>
+                  <li>6)What does "2"+1+3 evaluate to? </li>
+                  <li>7)How about 1+2+"8"?</li>
+                  <li>8)What looping structures are there in JavaScript?</li>
+                  <li>9)What is this keyword?</li>
+                  <li>9)What is this keyword?</li>
+    			  <li>10)What is an array? How will you create a new Array?/ what are the different ways in which you can create an array?</li>
+                </ul>
+
+    			 <dl style="margin-left:30px">
+              <dt><span class="italicText">Question 1.</span> What are the different JavaScript types?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		  Types are the building blocks of any language. JavaScript's types are:
+                <ul>
+                  <li>a) Number</li>
+                  <li>b) String,</li>
+                  <li>c) Boolean, </li>
+                  <li>d) Function,</li>
+                  <li>e) Object,</li>
+                  <li>f) Null, </li>
+                  <li>g) Undefined.</li>
+                  <li>Dates and Regular Expressions, and Arrays are all built-in objects. A function is also an object</li>
+                </ul>
+              </dd>
+            </dl>
+    		 <dl style="margin-left:30px">
+              <dt><span class="italicText">Question 2.</span>How can you convert a string to an integer (number in general)            using javascript?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		 Javascript has a built-in parseInt() function which can be used to this. This function Parses a string argument and returns an integer of the specified radix or base.
+    		 <div class="sampleCode">
+    			Example: parseInt("23")
+    		 </div>
+              </dd>
+            </dl>
+    		<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 3.</span> What does isNaN function do?/ how will you check if a value is numeric or not?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+    		 <div class="sampleCode">
+    			parseInt("dear", 25)<br>
+    			Output:NaN
+    		 </div>
+              </dd>
+            </dl>
+    		<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 4.</span> What is eval, Why would you use it or avoid it?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+    		 <div class="sampleCode">
+    			parseInt("dear", 25)<br>
+    			Output:NaN
+    		 </div>
+              </dd>
+            </dl>
+    		<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 4.</span> Name some string methods, what does each of below do?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		Some commonly used ones are:<br>
+    		<ul>
+                  <li>	a) charAt: Returns the character at index.</li>             
+    			  </ul>
+    		
+    		 <div class="sampleCode">
+    				var myStr = "I Love Javascript"; <br>
+    	var result = myStr.charAt(2); <br>
+    	Output : L<br>
+    		 </div>
+    		 	<ul>
+                  <li>b) indexOf: Finds position of a substring.</li>             
+    			  </ul>
+    			  	 <div class="sampleCode">
+    			var myStr = "I Love Javascript"; <br>
+    	var result = myStr. indexOf("Love"); <br>
+    	Output : 2;
+    		 </div>
+    		 <ul>
+                  <li>c)substring: Extracts a substring from index to ending Index.</li>             
+    			  </ul>
+    			  	 <div class="sampleCode">
+    			var myStr = "Javascript";<br>
+    	var result = myStr. indexOf("Love");<br>
+    	Output : 2;
+    		 </div>
+              </dd>
+            </dl>
+    		<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 5.</span> What is the difference between a == and  ===?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		JavaScript has both strict and Type–converting (abstract) comparisons. A strict comparison (e.g. ===) is only true if the operands are the same Type. The more commonly used abstract comparison (e.g. ==) converts the operands to the same Type before making the comparison.
+              </dd>
+            </dl>
+    		<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 6.</span>What does "2"+1+3 evaluate to??</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		Since 1 is a string, everything is a string, so the result is 213.
+    		 <div class="sampleCode">
+    			 "2"+1+3 = <br>
+    			Output:213
+    		 </div>
+              </dd>
+            </dl>
+    		<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 7.</span> How about 1+2+"8"? </dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		 Since 1 and 2 are integers, this is number arithmetic, since 8 is a string, it's concatenation, so 38 is the result.
+    		 <div class="sampleCode">
+    			 "2"+1+3 = <br>
+    			Output:213
+    		 </div>
+              </dd>
+            </dl>
+    		<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 7.</span> What looping structures are there in JavaScript? </dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		  for, while, do-while loops.
+    	          </dd>
+            </dl>
+    			<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 7.</span>What is this keyword? </dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    			 It refers to the current object.
+    		
+              </dd>
+            </dl>
+    <dl style="margin-left:30px">
+              <dt><span class="italicText">Question 7.</span> what is an array? How will you create a new Array?/ what are the different ways in which you can create an array?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    			 It refers to the current object.
+    		
+              </dd>
+            </dl>
+			<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 7.</span>Difference between null and undefined?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    			In javascript, null is an object with no value and undefined is a type
+    		
+              </dd>
+            </dl>
+			<dl style="margin-left:30px">
+              <dt><span class="italicText">Question 7.</span>Which tools you've used for javascript/jquery debugging? In which scenario?</dt>
+              <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+    		When you want an element on the left or right of the floating element not to wrap around it, you can use clear.
+              </dd>
+            </dl>
+    		</div>
+    	</div>
+
+        </div>
+    	<aside style="float:left;width:15%;border:1px solid black;">
+    	youe adds here
+    	</aside>
+      </div>
+    </div>
+    </body>
+    </html>

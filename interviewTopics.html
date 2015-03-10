@@ -1,0 +1,340 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+html, body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+body {
+}
+.contentDiv {
+    height:100%;
+    width:100%;
+    /*/flower.gif*/
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size:14px;
+    color:#04026a;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow:auto;
+}
+
+h5 {
+    font-size:12px;
+    margin-left:5%;
+}
+h1 {
+    line-height: 89px;
+    padding-bottom: 29px;
+    padding-left: 59px;
+    line-height: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    color:#940f0f;
+    font-family:"Monotype Corsiva";
+    font-size:20px;
+    margin-bottom:0;
+}
+h2 {
+    line-height: 89px;
+    padding-bottom: 29px;
+    padding-left: 59px;
+    line-height: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    color:#940f0f;
+    font-family:"Monotype Corsiva";
+    font-size:14px;
+    margin-bottom:0;
+}
+#topNav {
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+    positon:fixed;
+    top:0;
+}
+#topNav li {
+    display:inline;
+    padding:10px 20px 0px 10px;
+    cursor:hand;
+}
+#slider {
+    border-bottom:2px groove;
+    position:absolute;
+    height:2px;
+    width:70px;
+}
+#homeCont {
+    border:1px solid white;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+    overflow: hidden;
+    width:95%;
+    margin-left:2%!important;
+    background:rgba(255, 255, 255, 0.7);
+    clear:both;
+}
+.hometext {
+    font-size:16px;
+    font-weight:700;
+    font-style:italic;
+}
+#sampleImgs img {
+    border:5px groove #ffffff;
+    margin:15px;
+    float:left;
+    padding:1px;
+}
+
+a.htwonav {
+    outline: none;
+	text-decoration:none;
+	 font-family: Georgia, "Times New Roman", Times, serif;
+    font-size:14px;
+    color:#04026a;
+}
+a.htwonav:hover {
+    outline: none;
+	text-decoration:underline;
+	 font-family: Georgia, "Times New Roman", Times, serif;
+    font-size:14px;
+    color:#04026a;
+}
+
+a img {
+    border: 1px solid #BBB;
+    padding: 2px;
+    margin: 10px 20px 10px 0;
+    vertical-align: top;
+}
+
+a img.last {
+    margin-right: 0;    
+}
+
+ul {
+    margin-bottom: 24px;
+    padding-left: 30px; list-style-type:none;
+}
+.italicText{ font-style:italic; font-weight:bolder;}
+dd{ color:black;}
+.sampleCode{margin:5px; padding:5px;width:80%; font-style:italic; background:#f3f3f3; border:1px solid #f2f2f2;}
+</style>
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<link href="js/slimscroll/libs/prettify/prettify.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/slimscroll/libs/prettify/prettify.js"></script>
+<script type="text/javascript" src="js/slimscroll/jquery.slimscroll.min.js"></script>
+<script>
+        !window.jQuery && document.write('<script src="jquery-1.10.1.min.js"><\/script>');
+    </script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="js/fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="js/fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="js/fancyBoxsource/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+    <script type="text/javascript" src="js/fancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+   /* $('#scrollingContent').slimscroll({
+    size: '7px',
+      height: '600px',
+  width: '99%'
+  });
+
+   $('#webSamples').slimscroll({
+    size: '7px',
+      height: '580px',
+  width: '60%'
+  });
+      
+
+    });
+</script>
+</head>
+<body>
+<div class="contentDiv">
+  <!---->
+  <ul id="topNav" class="topNav" style="">
+    <li style="" id="homelnk" class="homelnk"> Home </li>
+    <li style="" id="samplelnk" class="samplelnk"> Samples </li>
+    <li style="" id="contactlnk" class="contactlnk "> Contact </li>
+    <li style="" id="contactlnk" class="contactlnk "> Photo Galary</li>
+    <li style="" id="contactlnk" class="contactlnk "> Tutorials</li>
+  </ul>
+  <div id="slider" style=" ">&nbsp;</div>
+  <br />
+  <br />
+  <div id="homeCont" style="">
+    <div id="scrollingContent" style="float:left;width:80%;border:1px solid black;margin-right:2%;">
+  &nbsp;
+		<h1>  Javascript Interview Questions</h1>
+		<ul>
+			<li>
+				<a class="htwonav" href="javascript:void(0);">Basic Level Questions</a>
+			</li>
+			<li>
+				<a class="htwonav" href="javascript:void(0);">Intermediate/advanced Level Questions</a>
+			</li>
+		</ul>
+
+
+	<div>
+	<h2>Basic Javascript Interview questions</h2>
+		<div>
+		   <ul>
+              <li>1) What are the different JavaScript types?</li>
+              <li>2)What does isNaN function do?/ how will you check if a value is numeric or not?</li>
+              <li>3)What is eval, Why would you use it or avoid it? </li>
+              <li>4) Name some string methods, what does each of below do?</li>
+              <li>5) What is the difference between a == and ===?</li>
+              <li>6)What does "2"+1+3 evaluate to? </li>
+              <li>7)How about 1+2+"8"?</li>
+              <li>8)What looping structures are there in JavaScript?</li>
+              <li>9)What is this keyword?</li>
+              <li>9)What is this keyword?</li>
+			  <li>10)What is an array? How will you create a new Array?/ what are the different ways in which you can create an array?</li>
+            </ul>
+
+			 <dl style="margin-left:30px">
+          <dt><span class="italicText">Question 1.</span> What are the different JavaScript types?</dt>
+          <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		  Types are the building blocks of any language. JavaScript's types are:
+            <ul>
+              <li>a) Number</li>
+              <li>b) String,</li>
+              <li>c) Boolean, </li>
+              <li>d) Function,</li>
+              <li>e) Object,</li>
+              <li>f) Null, </li>
+              <li>g) Undefined.</li>
+              <li>Dates and Regular Expressions, and Arrays are all built-in objects. A function is also an object</li>
+            </ul>
+          </dd>
+        </dl>
+		 <dl style="margin-left:30px">
+          <dt><span class="italicText">Question 2.</span>How can you convert a string to an integer (number in general)            using javascript?</dt>
+          <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		 Javascript has a built-in parseInt() function which can be used to this. This function Parses a string argument and returns an integer of the specified radix or base.
+		 <div class="sampleCode">
+			Example: parseInt("23")
+		 </div>
+          </dd>
+        </dl>
+		<dl style="margin-left:30px">
+          <dt><span class="italicText">Question 3.</span> What does isNaN function do?/ how will you check if a value is numeric or not?</dt>
+          <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+		 <div class="sampleCode">
+			parseInt("dear", 25)<br>
+			Output:NaN
+		 </div>
+          </dd>
+        </dl>
+		<dl style="margin-left:30px">
+          <dt><span class="italicText">Question 4.</span> What is eval, Why would you use it or avoid it?</dt>
+          <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		Returns true if the argument is not a number. A special value called NaN (short for "Not a Number") is returned if the string is non-numeric:
+		 <div class="sampleCode">
+			parseInt("dear", 25)<br>
+			Output:NaN
+		 </div>
+          </dd>
+        </dl>
+		<dl style="margin-left:30px">
+          <dt><span class="italicText">Question 4.</span> Name some string methods, what does each of below do?</dt>
+          <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		Some commonly used ones are:<br>
+		<ul>
+              <li>	a) charAt: Returns the character at index.</li>             
+			  </ul>
+		
+		 <div class="sampleCode">
+				var myStr = "I Love Javascript"; <br>
+	var result = myStr.charAt(2); <br>
+	Output : L<br>
+		 </div>
+		 	<ul>
+              <li>b) indexOf: Finds position of a substring.</li>             
+			  </ul>
+			  	 <div class="sampleCode">
+			var myStr = "I Love Javascript"; <br>
+	var result = myStr. indexOf("Love"); <br>
+	Output : 2;
+		 </div>
+		 <ul>
+              <li>c)substring: Extracts a substring from index to ending Index.</li>             
+			  </ul>
+			  	 <div class="sampleCode">
+			var myStr = "Javascript";<br>
+	var result = myStr. indexOf("Love");<br>
+	Output : 2;
+		 </div>
+          </dd>
+        </dl>
+		<dl style="margin-left:30px">
+          <dt><span class="italicText">Question 5.</span> What is the difference between a == and  ===?</dt>
+          <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		JavaScript has both strict and Type–converting (abstract) comparisons. A strict comparison (e.g. ===) is only true if the operands are the same Type. The more commonly used abstract comparison (e.g. ==) converts the operands to the same Type before making the comparison.
+          </dd>
+        </dl>
+		<dl style="margin-left:30px">
+          <dt><span class="italicText">Question 6.</span>What does "2"+1+3 evaluate to??</dt>
+          <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		Since 1 is a string, everything is a string, so the result is 213.
+		 <div class="sampleCode">
+			 "2"+1+3 = <br>
+			Output:213
+		 </div>
+          </dd>
+        </dl>
+		<dl style="margin-left:30px">
+          <dt><span class="italicText">Question 7.</span> How about 1+2+"8"? </dt>
+          <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		 Since 1 and 2 are integers, this is number arithmetic, since 8 is a string, it's concatenation, so 38 is the result.
+		 <div class="sampleCode">
+			 "2"+1+3 = <br>
+			Output:213
+		 </div>
+          </dd>
+        </dl>
+		<dl style="margin-left:30px">
+          <dt><span class="italicText">Question 7.</span> What looping structures are there in JavaScript? </dt>
+          <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+		  for, while, do-while loops.
+	          </dd>
+        </dl>
+			<dl style="margin-left:30px">
+          <dt><span class="italicText">Question 7.</span>What is this keyword? </dt>
+          <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+			 It refers to the current object.
+		
+          </dd>
+        </dl>
+<dl style="margin-left:30px">
+          <dt><span class="italicText">Question 7.</span> what is an array? How will you create a new Array?/ what are the different ways in which you can create an array?</dt>
+          <dd style="margin-top:10px;"><span class="italicText"> Answer:</span>
+			 It refers to the current object.
+		
+          </dd>
+        </dl>
+		</div>
+	</div>
+
+    </div>
+	<aside style="float:left;width:15%;border:1px solid black;">
+	youe adds here
+	</aside>
+  </div>
+</div>
+</body>
+</html>

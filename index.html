@@ -1,0 +1,276 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<link href="js/slimscroll/libs/prettify/prettify.css" type="text/css" rel="stylesheet" />
+<link id="pagestyle" href="css/lemon.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/slimscroll/libs/prettify/prettify.js"></script>
+<script type="text/javascript" src="js/slimscroll/jquery.slimscroll.min.js"></script>
+<script>
+        !window.jQuery && document.write('<script src="jquery-1.10.1.min.js"><\/script>');
+    </script>
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="js/fancyBox/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="js/fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+<!-- Add Button helper (this is optional) -->
+<link rel="stylesheet" type="text/css" href="js/fancyBoxsource/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+<script type="text/javascript" src="js/fancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript">
+function swapStyleSheet(sheet) {
+    document.getElementById("pagestyle").setAttribute("href", sheet);  
+}
+	function isScrolledIntoView(elem)
+{
+   // var docViewTop =$('#scrollingContent').scrollTop();
+//    var docViewBottom = docViewTop + $('#scrollingContent').height();
+//
+//    var elemTop = $(elem).offset().top;
+//    var elemBottom = elemTop + $(elem).height();
+//	$("#topNav").children('li').removeClass('text-shadow');
+//
+//				  if($('#scrollingContent').scrollTop() + $('#scrollingContent').innerHeight()>=$('#scrollingContent')[0].scrollHeight-$('#scrollingContent').height())
+//                              {
+//                		            $("#ArtWorklnk").addClass('text-shadow');/*this is to check if the scroll end of doc has been reached*/
+//                              }
+//
+//		//$(elem).parent().addClass('text-shadow');
+//		if($('#scrollingContent').scrollTop() == 0) {
+//				$("#homelnk").addClass('text-shadow');
+//			}
+//		if($(elem).attr('id') == "webDesignHeading"){
+//			$("#webSiteNavlnk").addClass('text-shadow');
+//			}
+//		/*if($(elem).attr('id') == "aboutMeHead"){
+//			$("#homelnk").addClass('text-shadow');
+//			}
+//		
+//		if($(elem).attr('id') == "artWorkHeading"){
+//			$("#ArtWorklnk").addClass('text-shadow');
+//			}*/
+//		
+//  return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+$("#topNav").children('li').removeClass('text-shadow');
+	if($('#scrollingContent').scrollTop() == 0)
+		{
+			$("#homelnk").addClass('text-shadow');
+		}
+
+	if($('#scrollingContent').scrollTop() > $('#AboutMeDiv').innerHeight() - 20)
+		{
+				$("#webSiteNavlnk").addClass('text-shadow');
+		 }
+	 if($('#scrollingContent').scrollTop() + $('#scrollingContent').innerHeight()>=$('#scrollingContent')[0].scrollHeight-$('#ArtWorklnk').height())
+	  {
+			$("#ArtWorklnk").addClass('text-shadow');/*this is to check if the scroll end of doc has been reached*/
+	  }
+
+}
+
+ // This is a functions that scrolls to #{blah}link
+function goToByScroll(id, me){
+    
+		var exactscrollTop = $("#"+id).offset().top ;
+		$("#topNav").children('li').removeClass('text-shadow');
+		$(me).addClass('text-shadow');
+
+		 $('#scrollingContent').slimScroll({ scrollBy: exactscrollTop - 100 });
+}
+
+    $(document).ready(function(){
+		
+		$("#topNav").click();
+		
+/*		$(".fixedHeight").css('visibility','hidden');
+		$("#AboutMeDiv").css('visibility','visible');*/
+		 $('#scrollingContent').scroll(function(){
+			$("#topNav").children('li').removeClass('text-shadow');
+	if($('#scrollingContent').scrollTop() == 0)
+		{
+			$("#homelnk").addClass('text-shadow');
+		}
+
+	if($('#scrollingContent').scrollTop() > $('#AboutMeDiv').innerHeight() - 20)
+		{
+				$("#webSiteNavlnk").addClass('text-shadow');
+		 }
+	 if($('#scrollingContent').scrollTop() + $('#scrollingContent').innerHeight()>=$('#scrollingContent')[0].scrollHeight- $('#ArtWorklnk').height())
+	  {$("#topNav").children('li').removeClass('text-shadow');
+			$("#ArtWorklnk").addClass('text-shadow');/*this is to check if the scroll end of doc has been reached*/
+	  }
+			/* $(".fixedHeight").each(function(index, element) {
+				
+               var myH1 =   $(this).children("h1"); 
+			   isScrolledIntoView( myH1 );
+            });*/
+			
+			 
+			 })
+    $('#scrollingContent').slimscroll({
+    size: '7px',
+      height: '600px',
+  width: '99%'
+  });
+
+
+            $('.imageanchors').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+
+                prevEffect : 'none',
+                nextEffect : 'none',
+
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    }
+                },
+
+                afterLoad : function() {
+                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
+$("body").one('mouseover',function(){
+$(".contentDivInner").fadeTo( 5000 , 1, function() {
+});
+
+})
+$('#changeThemeLink').click(function(){
+if($("#theams").find("ul").css('display') == 'block')
+{
+$("#theams").find("ul").slideUp('slow',function(){
+$(this).css('display', 'none');
+$("#theams").find('h2').html('Change Theme');
+});
+}
+else{
+
+$("#theams").find("ul").slideDown('slow',function(){
+$(this).css('display', 'block');
+});
+$("#theams").find('h2').html('Dont Change Theme');
+}
+});
+/*$("body").click(funtion(e){
+if(e.target.id == "theams")
+{}
+
+})*/
+$("#changeThemeLink").find("li").on('click',function(){console.log("here")
+	var mytheme = $(this).attr("data-theme");
+	console.log(mytheme)
+	    $("#pagestyle").attr("href", mytheme);  
+//	swapStyleSheet(mytheme);
+	});
+$(".otherFont").click(function(){
+/**/if($(".contentDiv").hasClass('sanFont')){
+$(".contentDiv").removeClass("sanFont")
+//$("#AboutMeDiv").addClass("hometext");
+}
+else{
+$(".contentDiv").addClass("sanFont")
+//$("#AboutMeDiv").find(".hometext");
+}
+})
+    });
+
+</script>
+</head>
+<body>
+
+<!---->
+<div id="headerPart">
+  <div class="navbar-toggle" style="background:#0b036a; border:1px solid black; height:22px; width:30px;" > <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </div>
+  <ul id="topNav" class="topNav" style="">
+    <li style="" id="homelnk" class="homelnk" onClick="goToByScroll('AboutMeDiv',this);"> Home </li>
+    <!--    <li style="" id="samplelnk" class="samplelnk" onClick="goToByScroll('websiteDesignSamples',this);"> Samples </li>-->
+    <li style="" id="webSiteNavlnk" class="contactlnk " onClick="goToByScroll('websiteDesignSamples',this);"> Web Site Designs </li>
+    <!--    <li style="" id="contactlnk" class="contactlnk " onClick="goToByScroll('websiteDesignSamples',this);"> Photo Galary</li>-->
+    <li style="" id="ArtWorklnk" class="contactlnk " onClick="goToByScroll('artWorkSamples',this);"> Art Work</li>
+  </ul>
+  <div id="slider" style=" ">&nbsp;</div>
+  <br />
+  <br />
+  <div id="theams" >
+    <h2 id="changeThemeLink">Change Theme</h2>
+    <ul style="display:none;">
+      <li data-theme="css/mystyles_2.css" onClick="swapStyleSheet('css/mystyles_2.css')"> Desi Theam </li>
+      <li data-theme="css/lemon.css"  onClick="swapStyleSheet('css/lemon.css')">Dreamy Lemon </li>
+      <li data-theme="css/mystyles_2.css" onClick=""> Pinky's Passion </li>
+    </ul>
+  </div>
+</div>
+<div class="contentDiv">
+  <div id="homeCont" style="">
+  <div>
+  <img src="images/dremyFlowerTop.png" class="decorativeTopImage" />
+  </div>
+    <div id="scrollingContent"> 
+      <!-- About Me Div-->
+      <div id="AboutMeDiv" class="fixedHeight">
+        <h1 id="aboutMeHead"><!--About me --> "Neque porro quisquam</h1>
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <!--          <a href="javascript:void(0);" class="otherFont floatRight" style="height:5px;">Change Font. </a>
+        <p class="hometext"> Welcome to my website!!! Thanks for stopping by,  I am a web designer, based in Bangalore, My hobbies are reading books, spending time with my family, music etc.
+          developer who has been in this field for over eight years.I love to do creative design.. 
+          
+          Please note I am NOT SUPPORTING INTERNET EXPLORER, the site works fine in IE. </p>
+        <h5>Things I Do</h5>
+        <blockquote>
+          <ul class="hometext">
+            <li>Web site designing and development</li>
+            <li>Icon Designing</li>
+            <li>Logo designing</li>
+            <li>e-greetings</li>
+          </ul>
+        </blockquote>
+        <p class="hometext">I love to do creative work, so if u want to get your e card, wedding invitaion, wesite designed, please contact me. If you want to get your site done, please contact me at rnijampure@gmail.com/ ng_rohini@yahoo.co.in</p>--> 
+        
+      </div>
+      <!-- About Me Div End--> 
+      <!--Web designs finish -->
+      <div id="websiteDesignSamples"  class="fixedHeight">
+        <h1 id="webDesignHeading">Some web designs done by me</h1>
+        <div style="" id='webSamples'>
+          <ul style="width:100%; margin:0px;padding:0;" class="slideshowSpecial">
+            <li style="width:100%;"> <a href="images/index.jpg" class="imageanchors" rel="example_group" id="example1"><img src="images/rishi_thumb.jpg" alt="Gauri-baby model"></a> <a href="images/innerpage1.jpg" class="imageanchors" rel="example_group" id="example1"><img src="images/rishi2_thumb.jpg" alt="Gauri-baby model"></a> <a href="images/pract.jpg" class="imageanchors" rel="example_group" id="example4"><img src="images/pract_thumb.jpg" title="Gauri-in playfull mood" alt="Gauri-baby model"></a> <a href="images/mobile.gif" class="imageanchors" rel="example_group" id="example1"><img src="images/sony_thumb.jpg" title="Hello baby, How do you do?" alt="Gauri-baby model"></a> <a href="images/inner_Page.jpg" class="imageanchors" rel="example_group" id="example2"><img src="images/adlabs3_thumb.jpg" alt="Gauri-baby model"></a> <a href="images/index_layout2.jpg" class="imageanchors" rel="example_group" id="example2"><img src=" images/adlabs2_thumb.jpg" alt="Gauri-baby model"></a> <a href="images/indexpage_2.jpg" class="imageanchors" rel="example_group" id="example1"><img src="images/adlabs1_thumb.jpg" alt="Gauri-baby model"></a> <a href="images/index1.jpg" class="imageanchors" rel="example_group" id="example4"><img src="images/Pres_thumb.jpg" alt="Gauri-baby model"></a> <a href="images/inner1.jpg" class="imageanchors" rel="example_group" id="example4"><img src="images/Pres1_thumb.jpg" alt="Gauri-baby model"></a> <a href="images/indexpage.jpg" class="imageanchors" rel="example_group" id="example1"><img src="images/indexpage_thumb.jpg" alt="Gauri-baby model"></a> <a href="images/laurenSpa.jpg" class="imageanchors" rel="example_group" id="example4"><img src="images/laurenSpa_thumb.jpg" alt="Gauri-baby model"></a> <a href="images/lauren_inner.jpg" class="imageanchors" rel="example_group" id="example4"><img src="images/lauren_inner_inner.jpg" alt="Gauri-baby model"></a> </li>
+          </ul>
+        </div>
+      </div>
+      <!--Web designs finish --> 
+      <!--Art work start -->
+      <div id="artWorkSamples"  class="fixedHeight">
+        <h1 id="artWorkHeading">Some Art work done by me</h1>
+        <div style="" id='webSamples'>
+          <ul style="width:100%; margin:0px;padding:0;" class="slideshowSpecial">
+            <li style="width:100%;"> <a id="example1" rel="example_group"  class="imageanchors"  href="images/big_women.jpg"><img alt="Gauri-baby model" src="images/readiingLady_thumb.jpg" /></a> <a id="example4" rel="example_group"   class="imageanchors"  href="images/coverBoy.jpg"><img src="images/coverBoy_thumb.jpg" /></a> <a id="example1" rel="example_group" class="imageanchors"  href="images/coverGirl.jpg"><img   alt="Gauri-baby model" title="Hello baby, How do you do?" src="images/coverGirl_thumb.jpg" /></a> <a id="example2" rel="example_group" class="imageanchors"  href="images/bindi.jpg"><img  alt="Gauri-baby model"  src="images/eye_thumb.jpg" /></a> <a id="example2" rel="example_group" class="imageanchors"  href="images/big_eng.jpg"><img   alt="Gauri-baby model"  src="images/wedding_thumb.jpg" /></a> <a id="example4" rel="example_group" class="imageanchors"  href="images/big_man_women.jpg"><img   alt="Gauri-baby model"  src="images/raj_thumb.jpg" /></a> <a id="example1" rel="example_group" class="imageanchors"  href="images/fat.jpg"><img   alt="Gauri-baby model"  src="images/mylady_thumb.jpg" /></a> <a id="example1" rel="example_group" class="imageanchors"  href="images/DSC00354.JPg"><img   alt="Gauri-baby model"  src="images/sitting_thumb.jpg" /></a> 
+              
+              <!--
+    <a id="example1" rel="example_group"  class="imageanchors"  href="img/big_women.jpg"><img alt="Gauri-baby model" src="img/readiingLady_thumb.jpg" /></a>
+    <a id="example4" rel="example_group"   class="imageanchors"  href="img/coverBoy.jpg"><img src="img/coverBoy_thumb.jpg" /></a>
+    <a id="example1" rel="example_group" class="imageanchors"  href="img/coverGirl.jpg"><img   alt="Gauri-baby model" title="Hello baby, How do you do?" src="img/coverGirl_thumb.jpg" /></a>
+   <a id="example2" rel="example_group" class="imageanchors"  href="img/bindi.jpg"><img  alt="Gauri-baby model"  src="img/eye_thumb.jpg" /></a>
+   <a id="example2" rel="example_group" class="imageanchors"  href="img/big_eng.jpg"><img   alt="Gauri-baby model"  src="img/wedding_thumb.jpg" /></a>
+     <a id="example4" rel="example_group" class="imageanchors"  href="img/big_man_women.jpg"><img   alt="Gauri-baby model"  src="img/raj_thumb.jpg" /></a>
+       <a id="example1" rel="example_group" class="imageanchors"  href="img/fat.jpg"><img   alt="Gauri-baby model"  src="img/mylady_thumb.jpg" /></a>
+               <a id="example1" rel="example_group" class="imageanchors"  href="img/DSC00354.JPg"><img   alt="Gauri-baby model"  src="img/sitting_thumb.jpg" /></a> 
+
+
+--> 
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--Web designs finish --> 
+    </div>
+      <img src="images/dremyFlowerBot.png" class="dremyFlowerBotImage" />
+  </div>
+</div>
+<div class="contentDivInner"> &nbsp;</div>
+<div class="contentDivStrips"> &nbsp;</div>
+</body>
+</html>
