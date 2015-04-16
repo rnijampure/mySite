@@ -147,7 +147,7 @@ ul {
     margin-bottom: 24px;
     padding-left: 30px; list-style-type:none;
 }
-#websiteDesignSamples,#artWorkSamples,#AboutMeDiv{padding-left: 59px;}
+#websiteDesignSamples,#artWorkSamples,#AboutMeDiv{padding-left: 59px;text-shadow: 1px 1px 2px rgba(3, 3, 3, 1);}
 #artWorkSamples{padding-left: 59px;}
 #webSamples{float:left; width:100%;overflow-y:hidden; text-align:left;}
 .otherFont{ font-family:Georgia, "Times New Roman", Times, serif; color:#04026A;font-size: 15px;    font-style: italic; position:absolute;top:0;bottom:0; right:0; text-decoration:none;}

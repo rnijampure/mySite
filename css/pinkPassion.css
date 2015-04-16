@@ -1,0 +1,215 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+body{background:#e6729f url(../images/bgfull2.jpg) right 0px no-repeat; font-family: Georgia,  Verdana, Arial, Helvetica, sans-serif, serif;font-style: italic; font-size:16px; color:#FFFFFF;}
+#hi{list-style-type: none; margin:0px; padding:0px;positon:absolute;}
+#hi li{display:inline; padding:10px 20px 0px 10px; cursor:hand;}
+#slider{border-bottom:2px groove; position:absolute;height:2px; width:70px; display:none;}
+#homeCont{font-size:12px; border:1px dashed white; height:600px; padding-left:20px;}
+/*.selected {
+	background:url(img/bg.png) transparent;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='bg.png');
+}*/
+.selected{background:url(img/bg-old.png);background-opacity: 0.1; }
+
+ .hi .homelnk a:hover, .hi .homelnk a:focus {
+        background: url(img/menuBg.gif) no-repeat ;
+    }
+    .hi .homelnk a:active {
+        background: url(img/menuBg.gif) no-repeat -23px -98px;
+    }
+#sampleImgs {}
+#sampleImgs img{border:5px groove #ffffff;margin:15px;float:left;padding:1px;}
+
+.otherFont span{  display: none;}
+.otherFont:after {
+  content: 'Change font size';
+}
+
+#topNav {
+
+  border-right: 1px dashed #ffffff;
+    border-top: 1px dashed #ffffff;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+    positon:fixed;
+	 z-index:999999;
+  margin: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+}
+#topNav li{  display: inline;/* background:url(../images/flower.gif) top left no-repeat;*/
+    padding: 20px;} 
+	#theams{   positon:fixed;
+	 z-index:999999;
+  margin: 0px;
+    position: absolute;
+	    width: 262px;
+    left: 10px;
+    top: 0;}
+	#changeThemeLink{ margin-top:0px; cursor:pointer; font-size:15px;}
+
+#homeCont {
+    border:1px dashed white;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    max-height:95%;
+    height:85%;
+    overflow: hidden;
+    width:95%;
+    margin-left:2%!important;
+	background:rgba(255, 255, 255, 0.05);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000'); /* IE */
+ margin-top: 40px;
+    clear:both;
+	/*opacity:0;*/
+	position: relative; z-index:3;
+}
+
+#sampleImgs img {
+    border:5px groove #ffffff;
+    margin:15px;
+    float:left;
+    padding:1px;
+}
+
+a {
+    outline: none;
+}
+
+a img {
+    border: 1px solid #BBB;
+    padding: 2px;
+    margin: 10px 20px 10px 0;
+    vertical-align: top;
+}
+
+a img.last {
+    margin-right: 0;    
+}
+
+ul {
+    margin-bottom: 24px;
+    padding-left: 30px; list-style-type:none;
+}
+/*#websiteDesignSamples,#artWorkSamples,#AboutMeDiv{padding-left: 59px;text-shadow: 1px 1px 2px rgba(3, 3, 3, 1);}*/
+#artWorkSamples{padding-left: 59px;}
+#webSamples{float:left; width:100%;overflow-y:hidden; text-align:left;}
+.otherFont{ font-family:Georgia, "Times New Roman", Times, serif; color:#04026A;font-size: 15px;    font-style: italic; position:absolute;top:0;bottom:0; right:0; text-decoration:none;}
+.floatRight{ float:right;}
+.contentDiv.sanFont{ font-family: Georgia,  Verdana, Arial, Helvetica, sans-serif, serif;  font-size:17px!important;}
+#theams{float:right;    position: absolute;    top: 0;    z-index: 999999; right:20px; }	
+.contentDiv.sanFont .hometext{ font-size:17px!important;}
+#theams h2{ margin-top:0;}	
+	#theams ul{ display:block;}
+	#theams ul li:hover{margin-top:10px; margin-bottom:10px; margin-left:10px;margin-right:-10px; background-color:rgba(230,117,161,0.8); color:#ffffff; cursor:pointer; font-size:14px; }	
+	#theams ul li{ padding:5px; background-color:#FFFFFF;margin: 10px; margin-left:-10px;  color:#e675a1;font-size:14px;
+	    -webkit-transition: all 1s ease-in-out 0s;
+    -moz-transition: all  1s ease-in-out 2s;
+    -ms-transition: all 1s ease-in-out 2s;
+    -o-transition: all  1s ease-in-out 2s;
+    transition: all  1s ease-in-out 2s;
+
+/*-webkit-transition: margin-left 0s ease  linear;
+-moz-transition: margin-left 0s ease  linear ;
+-o-transition: margin-left 0s linear;
+-ms-transition: margin-left 0s linear;
+transition: margin-left 1s ease ;*/
+    transition-delay: 0s;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;	
+	}	
+	
+#topNav li { cursor:pointer;}
+.navbar-toggle {
+		 display:none;}
+/*media quries*/
+
+/* Pads and larger phones */
+@media only screen and (max-width: 706px) {
+/*	#topNav{display:none;}
+#topNav li{ display:block;}*/	
+#websiteDesignSamples,#artWorkSamples,#AboutMeDiv{padding-left: 20px;}
+h1 {
+   background:none;
+   background-size: contain;
+    line-height: normal;
+    padding-bottom: 9px;
+    padding-left: 10px;
+    line-height:25px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    color:#940f0f;
+    font-size:20px;
+    margin-bottom:0;
+	    font-style:italic;
+}
+.icon-bar{
+	background-color:#fff;
+	border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 22px;
+	margin:4px;
+	
+	}
+
+
+.navbar-toggle {
+		 display:none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-left:10px;
+    margin-bottom: 8px;
+    margin-right: 15px;
+    margin-top: 8px;
+    padding: 4px;
+    position: absolute;
+	 z-index:999999;
+		 display:block;
+}
+#topNav {
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+    positon:fixed;
+	 z-index:999999;
+    top:45px;
+	position:relative; color: #241A9C;
+font-weight: bold;
+font-size: 19px;
+}
+#topNav li {    display:block;    padding:10px;    cursor:hand;}
+}
+.text-shadow{/*text-shadow:5px 2px 4px #000000;text-shadow:3px 2px 2px #ffffff;*/
+/*border-radius: 8px; 
+-webkit-border-radius:8px; 
+-moz-border-radius:8px; 
+	background:rgba(0, 0, 0, 0.2);box-shadow: 0px 0px 0px #333333; 
+-webkit-box-shadow: 0px 0px 0px #333333; 
+-moz-box-shadow: 0px 0px 0px #333333; 
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000');  IE */}
+.decorativeTopImage, .dremyFlowerBotImage{ display:none;}
+.fancybox-overlay {
+    background: url("../images/bg-old.png") repeat scroll 0 0 rgba(255, 255, 255, 0)!important;
+    display: none;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 8010;
+}

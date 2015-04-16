@@ -153,6 +153,7 @@ mark {
 small {
   font-size: 80%;
 }
+.otherFont span{  display: none;}
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -429,7 +430,7 @@ th {
 /*=======================================================================*/
 /* STYLES */
 body{ background:#eef017;}
-.contentDivStrips{ background: #eef017 url(../images/stripsBg.png)  right 30px repeat; float:right; width:100%; height:100%; position: fixed; top:0; left:1320px;}
+.contentDivStrips{ background: #eef017 url(../images/stripsBg.png)  right 30px repeat; float:right; width:12%; opacity: 0.2; height:100%; position: fixed; top:0; right:0;}
 #topNav {
     list-style-type: none;
     margin:0px;
@@ -442,10 +443,11 @@ font-weight: normal;
 font-size: 18px;
 }
 .decorativeTopImage{  display: block;
-    position: absolute;
-    left: 88%;
+    position: relative;
+	float:right;
+    right: -88px;
     top: -52px;
-    z-index: 999999;}
+    z-index: 999997;}
 .dremyFlowerBotImage{     bottom: -50px;
     display: block;
     left: 93%;
@@ -463,10 +465,10 @@ border-radius: 5px;
 -moz-box-shadow:    inset -1px -1px 9px 0px rgba(50, 50, 50, 0.82);
 box-shadow:         inset -1px -1px 9px 0px rgba(50, 50, 50, 0.82);
 
-background: #eef017 url(../images/dremyBg.png) left top no-repeat;
+background: #eef017 url(../images/dremyBg.png) left top repeat;
 
 
-	width:1024px; }
+	width:83%; }
 	.fixedHeight{ clear:both;}
 .slideshowSpecial  li a{ background: #ffffa7;
     border: 5px solid black; -webkit-border-radius: 5px;
@@ -483,8 +485,8 @@ box-shadow:         0px 0px 5px 0px rgba(25, 26, 26, 0.59);
 	#theams{float:right;    position: absolute;    top: 0;    z-index: 999999; right:20px; }	
 	#theams h2{ margin-top:0;}	
 	#theams ul{ display:block;}
-	#theams ul li:hover{margin-top:10px; margin-bottom:10px; margin-left:10px;margin-right:-10px; background-color:#241A9C; color:#ffffff; cursor:pointer; list-style-type:none; }	
-	#theams ul li{ padding:5px; background-color:#FFFFFF;margin: 10px; margin-left:-10px; 
+	#theams ul li:hover{margin-top:10px; margin-bottom:10px; margin-left:10px;margin-right:-10px; background-color:#000000; color:#ffffff; cursor:pointer; list-style-type:none; }	
+	#theams ul li{ list-style-type:none;padding:5px; background-color:#eef017;margin: 10px; margin-left:-10px; 
 	    -webkit-transition: all 1s ease-in-out 0s;
     -moz-transition: all  1s ease-in-out 2s;
     -ms-transition: all 1s ease-in-out 2s;
