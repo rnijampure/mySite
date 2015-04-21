@@ -505,3 +505,18 @@ transition: margin-left 1s ease ;*/
 -moz-border-radius: 5px;
 border-radius: 5px;	
 	}	
+	
+ img.dremyFlowerBotImage{
+-webkit-transition: all 5s ease-in-out;
+-moz-transition: all 5s ease-in-out; 
+-o-transition: all 5s ease-in-out; 
+-ms-transition: all 5s ease-in-out; 
+}
+
+img.dremyFlowerBotImage:hover { 
+-webkit-transform: rotate(360deg); 
+-moz-transform: rotate(360deg); 
+-o-transform: rotate(360deg);
+-ms-transform: rotate(360deg); 
+}
+.navbar-toggle{ display:none;}

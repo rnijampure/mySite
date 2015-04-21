@@ -187,6 +187,7 @@ border-radius: 5px;
 @media only screen and (max-width: 706px) {
 /*	#topNav{display:none;}
 #topNav li{ display:block;}*/	
+#changeThemeLink{ display:none;}
 #websiteDesignSamples,#artWorkSamples,#AboutMeDiv{padding-left: 20px;}
 h1 {
    background:none;
@@ -239,7 +240,7 @@ h1 {
 font-weight: bold;
 font-size: 19px;
 }
-#topNav li {    display:block;    padding:10px;    cursor:hand;}
+#topNav li {    display:none;    padding:10px;    cursor:hand;}
 }
 .text-shadow{/*text-shadow:5px 2px 4px #000000;*/text-shadow:3px 2px 2px #ffffff;
 /*border-radius: 8px; 
